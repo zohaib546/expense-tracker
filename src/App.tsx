@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Balance from "./components/Balance/Balance";
+import History from "./components/History/History";
+import AddTransaction from "./components/AddTransaction/AddTransaction";
+import { useState } from "react";
+import "./App.css";
+
+const history = [
+  {
+    id: 1,
+    description: "this is desc",
+    isExpense: true,
+    isIncome: false,
+    value: 20,
+  },
+];
 
 function App() {
+  const [state, setState] = useState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>Expense Tracker</h2>
+      <Balance />
+      <div className="container">
+        <div className="grid">
+          <History />
+          <AddTransaction />
+        </div>
+      </div>
+    </>
   );
 }
 
