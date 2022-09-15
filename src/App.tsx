@@ -16,6 +16,7 @@ const history = [
 
 function App() {
   const [state, setState] = useState();
+
   return (
     <>
       <h2>Expense Tracker</h2>
