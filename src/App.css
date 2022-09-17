@@ -1,100 +1,104 @@
 .container {
-  margin: 30px auto;
-  width: 650px;
+	margin: 30px auto;
+	width: 650px;
 }
 
 .inc-exp-container {
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
 }
 
 .inc-exp-container > div:first-of-type {
-  border-right: 1px solid #dedede;
+	border-right: 1px solid #dedede;
 }
 
 .inc-exp-container > div {
-  flex: 1;
-  text-align: center;
+	flex: 1;
+	text-align: center;
 }
 
 .money {
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin: 5px 0;
+	font-size: 20px;
+	letter-spacing: 1px;
+	margin: 5px 0;
 }
 
 .money.plus {
-  color: #2ecc71;
+	color: #2ecc71;
 }
 
 .money.minus {
-  color: #c0392b;
+	color: #c0392b;
 }
 
 .list {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 40px;
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 40px;
 }
 
 .btn {
-  cursor: pointer;
-  background-color: #9c88ff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  color: #fff;
-  border: 0;
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 30px;
-  padding: 10px;
-  width: 100%;
+	cursor: pointer;
+	background-color: #9c88ff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	color: #fff;
+	border: 0;
+	display: block;
+	font-size: 16px;
+	margin: 10px 0 30px;
+	padding: 10px;
+	width: 100%;
+}
+
+.btn:disabled {
+	cursor: not-allowed;
 }
 
 .list li {
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  color: #333;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  padding: 10px;
-  margin: 10px 0;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	color: #333;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	padding: 10px;
+	margin: 10px 0;
 }
 
 .list li.plus {
-  border-right: 5px solid #2ecc71;
+	border-right: 5px solid #2ecc71;
 }
 
 .list li.minus {
-  border-right: 5px solid #c0392b;
+	border-right: 5px solid #c0392b;
 }
 
 .list li:hover .delete-btn {
-  opacity: 1;
+	opacity: 1;
 }
 
 .delete-btn {
-  cursor: pointer;
-  background-color: #e74c3c;
-  border: 0;
-  color: #fff;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 2px 5px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-100%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+	cursor: pointer;
+	background-color: #e74c3c;
+	border: 0;
+	color: #fff;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 2px 5px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(-100%, -50%);
+	opacity: 0;
+	transition: opacity 0.3s ease;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
 }
