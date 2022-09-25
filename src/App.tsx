@@ -5,6 +5,8 @@ import AddTransaction from "./components/AddTransaction/AddTransaction";
 import { Transaction, Transactions } from "./types/types";
 import "./App.css";
 
+// I made this comment for review branch
+
 function App() {
 	const [transactions, setTransactions] = useState<Transactions[]>([]);
 
