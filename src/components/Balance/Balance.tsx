@@ -1,34 +1,30 @@
-import { Transactions } from "../../types/types";
+import { Transaction } from "../../types/types";
+import { currentBalance, currentExpense, currentIncome } from "./Balance.helpers";
 
 interface BalanceProps {
-	data: Transactions[];
+	data: Transaction[];
 }
 
 function Balance({ data }: BalanceProps) {
-	const currentBalance = `$${data.reduce((prev, curr) => (prev += curr.amount), 0)}.00`;
-	const currentIncome = `$${data.reduce(
-		(prev, curr) => (prev += curr.amount > 0 ? curr.amount : 0),
-		0
-	)}.00`;
-	const currentExpense = `$${
-		data.reduce((prev, curr) => (prev += curr.amount < 0 ? curr.amount : 0), 0) * -1
-	}.00`;
+	const balance = currentBalance(data);
+	const income = currentIncome(data);
+	const expense = currentExpense(data);
 
 	return (
 		<>
 			<h4>Your Balance</h4>
-			<h1>{currentBalance}</h1>
+			<h1>{balance}</h1>
 			<div className="inc-exp-container">
 				<div>
 					<h4>Income</h4>
 					<p id="money-plus" className="money plus">
-						{currentIncome}
+						{income}
 					</p>
 				</div>
 				<div>
 					<h4>Expense</h4>
 					<p id="money-minus" className="money minus">
-						{currentExpense}
+						{expense}
 					</p>
 				</div>
 			</div>

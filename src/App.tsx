@@ -2,13 +2,15 @@ import { useState } from "react";
 import Balance from "./components/Balance/Balance";
 import History from "./components/History/History";
 import AddTransaction from "./components/AddTransaction/AddTransaction";
-import { Transaction, Transactions } from "./types/types";
+import { TransactionType, Transaction } from "./types/types";
 import "./App.css";
 
-function App() {
-	const [transactions, setTransactions] = useState<Transactions[]>([]);
+// commented for review branch
 
-	const handleAdd = (values: Transaction<number>) => {
+function App() {
+	const [transactions, setTransactions] = useState<Transaction[]>([]);
+
+	const handleAdd = (values: TransactionType<number>) => {
 		const transaction = {
 			id: Math.floor(Math.random() * 100000000),
 			...values,
