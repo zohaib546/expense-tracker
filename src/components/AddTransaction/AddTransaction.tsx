@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Transaction } from "../../types/types";
+import { TransactionType } from "../../types/types";
 
 interface AddTransactionProps {
 	children?: React.ReactNode;
@@ -7,7 +7,7 @@ interface AddTransactionProps {
 }
 
 const AddTransaction = (props: AddTransactionProps): JSX.Element => {
-	const [value, setValue] = useState<Transaction<string>>({
+	const [value, setValue] = useState<TransactionType<string>>({
 		text: "",
 		amount: "",
 	});

@@ -1,6 +1,6 @@
-import { Transactions } from "./../../types/types";
+import { Transaction } from "./../../types/types";
 interface HistoryProps {
-	datalist: Transactions[];
+	datalist: Transaction[];
 	onDelete: (id: number) => void;
 }
 
